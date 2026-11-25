@@ -1,0 +1,13 @@
+####################################################
+# Model
+####################################################
+
+model_name: "/mnt/fs1/akash/Qwen-3-4B-It"
+trust_remote_code: true
+torch_dtype: "bfloat16"
+attn_implementation: "sdpa"
+
+padding_side: "left"
+chat_template: true
+
+enable_thinking: false

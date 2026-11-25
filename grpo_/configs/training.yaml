@@ -1,0 +1,88 @@
+# #####################################################
+
+experiment_name: "qwen_paraphrase_grpo_indic"
+
+seed: 3407
+
+#####################################################
+# Dataset
+#####################################################
+
+train_file: /mnt/fs1/akash/RL_train_data/data_4_train/three_lang/indic_train.jsonl
+
+eval_file: /mnt/fs1/akash/RL_train_data/data_4_train/three_lang/indic_validation_120_stratified.jsonl
+
+#####################################################
+# Output
+#####################################################
+
+output_dir: grpo/outputs/paraphrase_indic_RL/checkpoints
+
+overwrite_output_dir: false
+
+#####################################################
+# Optimization
+#####################################################
+
+learning_rate: 5.0e-7
+
+num_train_epochs: 1
+
+# max_steps: 30
+
+per_device_train_batch_size: 2
+
+gradient_accumulation_steps: 4
+
+weight_decay: 0.01
+
+max_grad_norm: 1.0
+
+#####################################################
+# Learning-rate scheduler
+#####################################################
+
+lr_scheduler_type: "cosine"
+
+warmup_ratio: 0.0
+
+#####################################################
+# Precision and memory
+#####################################################
+
+bf16: true
+
+gradient_checkpointing: true
+
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+
+#####################################################
+# Logging, evaluation and checkpoints
+#####################################################
+
+logging_steps: 100
+
+# No periodic checkpoint is needed during this short test.
+save_steps: 300
+
+eval_steps: 100
+
+report_to: "wandb"
+
+#####################################################
+# vLLM server mode
+#####################################################
+
+use_vllm: true
+
+vllm_mode: "colocate"
+
+# vllm_server_host: "127.0.0.1"
+
+# vllm_server_port: 8010
+
+# vllm_server_timeout: 600.0
+
+vllm_gpu_memory_utilization: 0.35
+vllm_max_model_length: 1536

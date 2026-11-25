@@ -1,0 +1,12 @@
+
+mode: "lexicographic"
+
+weights:
+  semantic: 0.60
+  naturalness: 0.30
+  chrfpp_reference: 0.10
+
+lexicographic_weights:
+  semantic: 1.0
+  naturalness: 0.1
+  chrfpp_reference: 0.001
