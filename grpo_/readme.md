@@ -7,7 +7,7 @@ This directory contains GRPO training pipelines for paraphrase generation. The e
 | Script | Purpose |
 | --- | --- |
 | `multi_train_grpo_indic.py` | Multilingual Indic GRPO, with configured vLLM integration and a shared reward that checks output language, penalizes exact source copying, evaluates semantic fidelity and naturalness, and includes reference-based chrF++. |
-| `multi_train_grpo_mono.py` | Bengali-oriented monolingual GRPO entry point using its monolingual configuration/reward imports and colocated vLLM generation. |
+| `multi_train_grpo_mono.py` | Monolingual GRPO entry point using its monolingual configuration/reward imports and colocated vLLM generation. |
 | `multi_train_grpo_no_think.py` | GRPO variant that retains reasoning as generation context while applying token-level policy loss to the final answer when recognized answer/reasoning markers are present. |
 
 The shared and language-specific reward modules live in `rewards/`; they include output extraction, language and exact-copy gates, configurable reward combination, judge diagnostics, and rollout logging. YAML files in `configs/` separate model, generation, optimization, LoRA, and reward settings.
