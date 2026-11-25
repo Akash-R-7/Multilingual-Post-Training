@@ -6,9 +6,10 @@ import yaml
 #     ├── configs/
 #     ├── rewards/
 #     ├── utils/
-#     │   ├── __init__.py
 #     │   ├── config.py
+#     │   ├── config_individual.py
 #     │   └── dataset.py
+#     │   ├── dataset_individual.py
 #     └── multi_train_grpo_indic.py
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
