@@ -32,7 +32,7 @@ Each subdirectory README describes its scripts and retains its documented launch
 
 ## Data notes
 
-The checked-in datasets are JSONL files. SFT scripts expect records with `inputs` and `targets`; the exact training and validation files are supplied as command-line arguments. GRPO uses the dataset loader and fields configured in `grpo_/configs/training.yaml`. Inference and judge scripts consume prediction/test JSONL records with source text and, where applicable, references. Consult the corresponding script and README when adapting a dataset.
+The checked-in datasets are JSONL files. SFT scripts expect records with `inputs` and `targets`; the exact training and validation files are supplied as command-line arguments. GRPO uses the dataset loader and fields configured in `grpo_/configs/training.yaml`. Inference and judge scripts consume prediction/test JSONL records with source text and, where applicable, references.
 
 ## Requirements
 
@@ -42,7 +42,7 @@ Dependencies are listed separately for each workflow:
 - GRPO: [`grpo_/grpo_requirements.txt`](grpo_/grpo_requirements.txt)
 - Inference and judging: [`eval/eval_requirements.txt`](eval/eval_requirements.txt)
 
-Training scripts require a compatible CUDA/PyTorch environment and access to the selected model checkpoint. GRPO reward evaluation also depends on the configured judge service and language-identification resources. Inference and judge scripts require a reachable OpenAI-compatible endpoint. The pinned dependency files describe workflow-specific environments; they may not be interchangeable.
+Training scripts require a compatible CUDA/PyTorch environment and access to the selected model checkpoint. GRPO reward evaluation also depends on the configured judge service and language-identification resources. Inference and judge scripts require a reachable OpenAI-compatible endpoint.
 
 ## Further reading
 

@@ -28,3 +28,6 @@ python sft_run_qwen_mixed_languages.py \
     --model_name Qwen/Qwen3-4B-Instruct-2507 \
     --output_dir <output_dir> \
     --epochs 3
+```
+
+**Command note:** `sft_run_qwen_mixed_languages.py` is not among the scripts currently tracked in this directory. The available Qwen entry points are listed above; inspect the selected script's `--help` output for its supported arguments before launching it.
