@@ -8,15 +8,15 @@ seed: 3407
 # Dataset
 #####################################################
 
-train_file: /mnt/fs1/akash/RL_train_data/data_4_train/three_lang/indic_train.jsonl
+train_file: ../../data/indic_train.jsonl
 
-eval_file: /mnt/fs1/akash/RL_train_data/data_4_train/three_lang/indic_validation_120_stratified.jsonl
+eval_file: ../../data/indic_validation_120_stratified.jsonl
 
 #####################################################
 # Output
 #####################################################
 
-output_dir: grpo/outputs/paraphrase_indic_RL/checkpoints
+output_dir: ../outputs/paraphrase_indic_RL/checkpoints
 
 overwrite_output_dir: false
 
