@@ -2,17 +2,17 @@ from pathlib import Path
 import yaml
 
 # Project layout:
-# /mnt/fs1/akash/TRL_/
 # └── grpo/
 #     ├── configs/
+#     ├── rewards/
 #     ├── utils/
 #     │   ├── __init__.py
 #     │   ├── config.py
 #     │   └── dataset.py
-#     └── multi_train_grpo_with_diagnostics.py
+#     └── multi_train_grpo_indic.py
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-GRPO_ROOT = PROJECT_ROOT / "grpo"
+GRPO_ROOT = PROJECT_ROOT / "grpo_"
 CONFIG_DIR = GRPO_ROOT / "configs"
 
 
